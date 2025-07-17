@@ -4,6 +4,12 @@ This repository provides a custom 3D aircraft combat simulation environment usin
 
 ---
 
+## Notebooks
+
+- [🚀 Run the Aircraft Combat RL environment on Google Colab](https://colab.research.google.com/drive/1c9JY-esaPhUODCKQOkJnPh5ScEaf8kFe?usp=sharing)
+
+---
+
 ## 📆 Features
 
 - ✅ Custom Gymnasium environment with relative motion and reward shaping.
