@@ -18,7 +18,17 @@ app = FastAPI(
     version="1.0.0",
 )
 
-allowed_origins = os.environ.get("CORS_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173").split(",")
+configured_origins = os.environ.get(
+    "CORS_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173"
+)
+allowed_origins = [
+    origin.strip()
+    for origin in configured_origins.split(",")
+    if origin.strip()
+]
+production_origin = "https://aircraft-combat.vercel.app"
+if production_origin not in allowed_origins:
+    allowed_origins.append(production_origin)
 
 app.add_middleware(
     CORSMiddleware,
