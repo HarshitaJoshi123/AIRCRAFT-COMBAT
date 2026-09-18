@@ -1,0 +1,19 @@
+# The trained model (models/ppo_aircraft_model.zip) was saved with:
+#   stable-baselines3==2.9.0, gymnasium==1.3.0, torch==2.11.0+cpu, numpy==2.1.3
+# (see models/ppo_aircraft_model.zip -> system_info.txt after unzip).
+# Installing versions at or above these is recommended for a guaranteed clean
+# PPO.load(). SB3 generally loads models saved by nearby point releases fine,
+# but if you hit a policy-loading error, pin to the exact versions above.
+
+fastapi>=0.115
+uvicorn[standard]>=0.34
+gymnasium>=1.0
+stable-baselines3>=2.4
+numpy>=1.26
+torch>=2.5
+pydantic>=2.10
+websockets>=14.1
+python-multipart>=0.0.20
+pytest>=8.3
+pytest-asyncio>=0.25
+httpx>=0.28
